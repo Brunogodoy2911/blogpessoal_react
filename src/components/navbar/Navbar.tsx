@@ -11,18 +11,16 @@ export default function Navbar() {
           <li className="text-[1.125rem] hover:underline hover:cursor-pointer">
             Postagens
           </li>
-          <li className="text-[1.125rem] hover:underline hover:cursor-pointer">
+          <li className="text-lg hover:underline hover:cursor-pointer">
             Temas
           </li>
-          <li className="text-[1.125rem] hover:underline hover:cursor-pointer">
+          <li className="text-lg hover:underline hover:cursor-pointer">
             Cadastrar Tema
           </li>
-          <li className="text-[1.125rem] hover:underline hover:cursor-pointer">
+          <li className="text-lg hover:underline hover:cursor-pointer">
             Perfil
           </li>
-          <li className="text-[1.125rem] hover:underline hover:cursor-pointer">
-            Sair
-          </li>
+          <li className="text-lg hover:underline hover:cursor-pointer">Sair</li>
         </ul>
       </nav>
     </header>
