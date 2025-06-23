@@ -1,10 +1,6 @@
 import React from "react";
 
-import {
-  LinkedinLogoIcon,
-  InstagramLogoIcon,
-  FacebookLogoIcon,
-} from "@phosphor-icons/react";
+import { LinkedinLogoIcon, GithubLogoIcon } from "@phosphor-icons/react";
 
 export default function Footer() {
   return (
@@ -16,19 +12,22 @@ export default function Footer() {
         Acesse nossas Redes Sociais
       </p>
 
-      <div className="flex text-white gap-0.5">
-        <LinkedinLogoIcon
-          size={34}
-          className="hover:cursor-pointer hover:text-gray-400 transition ease-in"
-        />
-        <InstagramLogoIcon
-          size={34}
-          className="hover:cursor-pointer hover:text-gray-400 transition ease-in"
-        />
-        <FacebookLogoIcon
-          size={34}
-          className="hover:cursor-pointer hover:text-gray-400 transition ease-in"
-        />
+      <div className="flex text-white gap-1">
+        <a href="https://www.linkedin.com/in/brunogodoydev/" target="_blank">
+          <LinkedinLogoIcon
+            size={34}
+            className="hover:cursor-pointer hover:text-gray-400 transition ease-in"
+          />
+        </a>
+
+        <a href="https://github.com/Brunogodoy2911" target="_blank">
+          <GithubLogoIcon
+            size={34}
+            className="hover:cursor-pointer hover:text-gray-400 transition ease-in"
+            href="https://github.com/Brunogodoy2911"
+            target="_blank"
+          />
+        </a>
       </div>
     </footer>
   );

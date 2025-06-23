@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router";
 
 export default function Navbar() {
   return (
     <header className="flex w-full h-[4.875rem] px-[4.68rem] bg-indigo-900 ">
       <nav className="flex flex-1 justify-between items-center">
         <h1 className="uppercase text-white font-bold text-2xl">
-          Blog Pessoal
+          <Link to="/home">Blog Pessoal</Link>
         </h1>
         <ul className="flex gap-4 text-white">
           <li className="text-[1.125rem] hover:underline hover:cursor-pointer">
