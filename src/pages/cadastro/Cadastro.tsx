@@ -1,11 +1,11 @@
 import React from "react";
-import "./cadastro.css";
+
+import { useNavigate } from "react-router";
+import { RotatingLines } from "react-loader-spinner";
 
 import type Usuario from "../../models/Usuario";
 
-import { useNavigate } from "react-router";
 import { cadastrarUsuario } from "../../services/Service";
-import { RotatingLines } from "react-loader-spinner";
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -64,6 +64,8 @@ function Cadastro() {
         ...usuario,
         senha: "",
       });
+
+      setConfirmaSenha("");
     }
   }
 
@@ -73,7 +75,6 @@ function Cadastro() {
         className="grid grid-cols-1 lg:grid-cols-2 h-screen 
             place-items-center font-bold"
       >
-        <div className="fundoCadastro hidden lg:block"></div>
         <form
           onSubmit={cadastrarNovoUsuario}
           className="flex justify-center items-center flex-col w-2/3 gap-3"
