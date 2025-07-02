@@ -8,13 +8,13 @@
 <br /> 
 
 <div align="center">   
-    <img src="https://img.shields.io/github/languages/top/Brunogodoy2911/blogpessoal_react?style=flat-square" />
-    <img src="https://img.shields.io/github/repo-size/Brunogodoy2911/blogpessoal_react?style=flat-square" />   
-     <img src="https://img.shields.io/github/languages/count/Brunogodoy2911/blogpessoal_react?style=flat-square" />
-    <img src="https://img.shields.io/github/last-commit/Brunogodoy2911/blogpessoal_react?style=flat-square" />
-    <img src="https://img.shields.io/github/issues/Brunogodoy2911/blogpessoal_react?style=flat-square" />
-  <img src="https://img.shields.io/github/issues-pr/Brunogodoy2911/blogpessoal_react?style=flat-square" />
-    <img src="https://img.shields.io/badge/status-concluido-green?style=flat-square" /> 
+    <img src="https://img.shields.io/github/languages/top/rafaelq80/blogpessoal_react_t82?style=flat-square" />
+    <img src="https://img.shields.io/github/repo-size/rafaelq80/blogpessoal_react_t82?style=flat-square" />   
+     <img src="https://img.shields.io/github/languages/count/rafaelq80/blogpessoal_react_t82?style=flat-square" />
+    <img src="https://img.shields.io/github/last-commit/rafaelq80/blogpessoal_react_t82?style=flat-square" />
+    <img src="https://img.shields.io/github/issues/rafaelq80/blogpessoal_react_t82?style=flat-square" />
+  <img src="https://img.shields.io/github/issues-pr/rafaelq80/blogpessoal_react_t82?style=flat-square" />
+    <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=flat-square" /> 
 </div>
 
 <br />
@@ -80,13 +80,13 @@ Antes de iniciar o projeto, certifique-se de ter instalado:
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/Brunogodoy2911/blogpessoal_react.git
+git clone https://github.com/rafaelq80/blogpessoal_react_t82.git
 ```
 
 2. **Acesse a pasta do projeto:**
 
 ```bash
-cd blogpessoal_react
+cd blogpessoal_react_t82
 ```
 
 3. **Instale as dependências:**
@@ -114,7 +114,7 @@ http://localhost:5173
 
 A aplicação se comunica com a API do projeto:
 
-🔗 [Blog Pessoal - Backend Spring Boot](https://github.com/Brunogodoy2911/Projeto-Blog-Pessoal---Backend)
+🔗 [Blog Pessoal - Backend Spring Boot](https://github.com/rafaelq80/blogpessoal_spring_t82)
 
 > A URL base da API deve ser configurada (ex: `http://localhost:8080`) em um arquivo de configuração, como `.env`, ou diretamente nos serviços do Axios.
 
@@ -167,5 +167,6 @@ Se você encontrou algum problema ou deseja propor melhorias:
 
 ## 10. Contato
 
-Desenvolvido por [**Bruno Godoy**](https://github.com/Brunogodoy2911)
+Desenvolvido por [**Rafael**](https://github.com/rafaelq80)
 Dúvidas ou sugestões? Entre em contato pelo GitHub ou abra uma issue no repositório.
+

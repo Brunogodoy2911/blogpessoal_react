@@ -1,34 +1,70 @@
-import React from "react";
+import {
+	FacebookLogoIcon,
+	InstagramLogoIcon,
+	LinkedinLogoIcon,
+} from '@phosphor-icons/react'
+import { useContext, type ReactNode } from 'react'
+import { AuthContext } from '../../contexts/AuthContext'
 
-import { LinkedinLogoIcon, GithubLogoIcon } from "@phosphor-icons/react";
+function Footer() {
+	const data = new Date().getFullYear()
 
-export default function Footer() {
-  return (
-    <footer className="fixed bottom-0 left-0 flex w-full h-[8.125rem] flex-col justify-center items-center bg-indigo-900 gap-1">
-      <h1 className="font-bold text-white text-xl">
-        Blog Pessoal Generation | Copyright: 2025
-      </h1>
-      <p className="font-bold text-white font-semibold text-base">
-        Acesse nossas Redes Sociais
-      </p>
+	const { usuario } = useContext(AuthContext)
 
-      <div className="flex text-white gap-1">
-        <a href="https://www.linkedin.com/in/brunogodoydev/" target="_blank">
-          <LinkedinLogoIcon
-            size={34}
-            className="hover:cursor-pointer hover:text-gray-400 transition ease-in"
-          />
-        </a>
+	let component: ReactNode
 
-        <a href="https://github.com/Brunogodoy2911" target="_blank">
-          <GithubLogoIcon
-            size={34}
-            className="hover:cursor-pointer hover:text-gray-400 transition ease-in"
-            href="https://github.com/Brunogodoy2911"
-            target="_blank"
-          />
-        </a>
-      </div>
-    </footer>
-  );
+	if (usuario.token !== ""){
+		component = (
+			<div className="flex justify-center bg-indigo-900 text-white">
+				<div className="container flex flex-col items-center py-4">
+					<p className="text-xl font-bold">
+						Blog Pessoal Generation | Copyright:{' '}
+						{data}
+					</p>
+					<p className="text-lg">
+						Acesse nossas redes sociais
+					</p>
+					<div className="flex gap-2">
+						<div className="flex gap-2">
+							<a
+								href="https://www.linkedin.com/in/seu_usuario"
+								target="_blank"
+							>
+								<LinkedinLogoIcon
+									size={48}
+									weight="bold"
+								/>
+							</a>
+							<a
+								href="https://www.instagram.com/seu_usuario"
+								target="_blank"
+							>
+								<InstagramLogoIcon
+									size={48}
+									weight="bold"
+								/>
+							</a>
+							<a
+								href="https://www.facebook.com/seu_usuario"
+								target="_blank"
+							>
+								<FacebookLogoIcon
+									size={48}
+									weight="bold"
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		)
+	}
+
+	return (
+		<>
+			{ component }
+		</>
+	)
 }
+
+export default Footer

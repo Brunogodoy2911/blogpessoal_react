@@ -1,48 +1,47 @@
-import React from "react";
-import { Link, NavLink, useNavigate } from "react-router";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useContext, type ReactNode } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../../contexts/AuthContext"
+import { ToastAlerta } from "../../utils/ToastAlerta"
 
-export default function Navbar() {
-  const navigate = useNavigate();
+function Navbar() {
 
-  const { handleLogout } = React.useContext(AuthContext);
+    const navigate = useNavigate()
 
-  function logout() {
-    handleLogout();
-    alert("O usuário foi desconectado com sucesso!");
-    navigate("/");
-  }
+    const { usuario, handleLogout } = useContext(AuthContext)
 
-  return (
-    <header className="flex w-full h-[4.875rem] px-[4.68rem] bg-indigo-900 ">
-      <nav className="flex flex-1 justify-between items-center">
-        <h1 className="uppercase text-white font-bold text-2xl">
-          <Link to="/home">Blog Pessoal</Link>
-        </h1>
-        <ul className="flex gap-4 text-white">
-          <li className="text-[1.125rem] hover:underline hover:cursor-pointer">
-            Postagens
-          </li>
-          <li className="text-lg hover:underline hover:cursor-pointer">
-            <NavLink to="/temas">Temas</NavLink>
-          </li>
-          <li className="text-lg hover:underline hover:cursor-pointer">
-            <NavLink to="/cadastrartema">
-            Cadastrar Tema
+    function logout(){
+        handleLogout()
+        ToastAlerta("O usuário foi desconectado com sucesso!", "info")
+        navigate("/")
+    }
 
-              </NavLink>
-          </li>
-          <li className="text-lg hover:underline hover:cursor-pointer">
-            Perfil
-          </li>
-          <li
-            className="text-lg hover:underline hover:cursor-pointer"
-            onClick={logout}
-          >
-            Sair
-          </li>
-        </ul>
-      </nav>
-    </header>
-  );
+    let component: ReactNode
+    
+    if(usuario.token !== ""){
+        component = (
+             <div className='w-full flex justify-center py-4
+            			   bg-indigo-900 text-white'>
+            
+                <div className="container flex justify-between text-lg mx-8">
+                    <Link to="/home" className="text-2xl font-bold">Blog Pessoal</Link>
+
+                    <div className='flex gap-4'>
+                        <Link to='/postagens' className='hover:underline'>Postagens</Link>
+                        <Link to='/temas' className='hover:underline'>Temas</Link>
+                        <Link to='/cadastrartema' className='hover:underline'>Cadastrar tema</Link>
+                        <Link to='/perfil' className='hover:underline'>Perfil</Link>
+                        <Link to="" onClick={logout} className="hover:underline">Sair</Link>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    return (
+        <>
+           { component }
+        </>
+    )
 }
+
+export default Navbar

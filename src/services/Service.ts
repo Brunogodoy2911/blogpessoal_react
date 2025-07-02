@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unsafe-function-type */
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://blogpessoal-xdnu.onrender.com",
+  baseURL: "https://blogpessoal-spring-t82.onrender.com",
 });
 
 export const cadastrarUsuario = async (
