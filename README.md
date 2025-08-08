@@ -114,7 +114,7 @@ http://localhost:5173
 
 A aplicação se comunica com a API do projeto:
 
-🔗 [Blog Pessoal - Backend Spring Boot](https://github.com/rafaelq80/blogpessoal_spring_t82)
+🔗 [Blog Pessoal - Backend Spring Boot](https://github.com/Brunogodoy2911/Projeto-Blog-Pessoal---Backend)
 
 > A URL base da API deve ser configurada (ex: `http://localhost:8080`) em um arquivo de configuração, como `.env`, ou diretamente nos serviços do Axios.
 
@@ -167,6 +167,6 @@ Se você encontrou algum problema ou deseja propor melhorias:
 
 ## 10. Contato
 
-Desenvolvido por [**Rafael**](https://github.com/rafaelq80)
+Desenvolvido por [**Bruno Godoy**](https://github.com/Brunogodoy2911)
 Dúvidas ou sugestões? Entre em contato pelo GitHub ou abra uma issue no repositório.
 
